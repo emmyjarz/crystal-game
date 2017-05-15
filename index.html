@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Game</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Crystals Collector</h1>
+		<div class="row">
+			<div class = "col-xs-8 explain">
+				<p> 
+					You will be given a random number at the start of the game.
+				</p>
+				<p>
+					There will be four crystals displayed as buttons on the page. The value of each crystals is hidden from you until you click on it. By clicking on a crystal you will add a specific amount of points to your total score.
+				</p>
+				<p>
+					you win the game if your total score matches the random number, you lose if your total score goes above the random number.
+				</p>
+				<p>
+					Each time when the game starts, the game will change the values of each crystal.
+				</p>
+			</div>
+			<div class = "col-xs-4">
+				<div class="panel panel-default">
+  					<div class="panel-heading">WINS: </div>
+  					<div class="panel-body">LOSES: </div>
+				</div>
+			</div>
+		</div><!--first row-->
+	<div class="row">
+		<div class = "col-xs-4">
+			<div class = "col-xs-12">
+				<div class="panel panel-default">
+  					<div class="panel-heading">Target Number</div>
+  					<div class="panel-body"><span id = "targetNum">0</span></div>
+				</div>
+			</div>
+			<div class = "col-xs-12">
+				<div class="panel panel-default">
+  					<div class="panel-heading">Your total score: </div>
+  					<div class="panel-body">
+    					<span id = "totalScore">0</span>
+  					</div>
+				</div>
+			</div>
+			
+		</div><!--left column-->
+		
+		<div class = "col-xs-8">
+			 <div class="row">
+ 				<div class = "col-xs-3">
+ 					<img id = "red" class = "thumbnail" src="assets/images/red.jpg" alt="">
+ 				</div>
+ 				<div class = "col-xs-3">
+ 					<img id = "yellow" class = "thumbnail" src="assets/images/yellow.jpg" alt="">
+ 				</div>
+ 				<div class = "col-xs-3">
+ 					<img id = "green" class = "thumbnail" src="assets/images/green.jpg" alt="">
+ 				</div>
+ 				<div class = "col-xs-3">
+ 					<img id = "blue" class = "thumbnail" src="assets/images/blue.jpg" alt="">
+ 				</div> 
+ 			</div> 
+		</div><!--right column-->
+	</div><!--second row-->
+</div><!--container-->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src = "assets/javascript/game.js"></script>	
+</body>
+</html>

@@ -1,0 +1,10 @@
+img{
+	width:100%;
+}
+.explain{
+	padding: 2em;
+}
+#targetNum, #totalScore{
+	font-size: 2em
+	
+}
