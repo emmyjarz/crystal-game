@@ -1,61 +1,40 @@
 var targetNum = 0;
-var rScore = crystalValue();
-var yScore = crystalValue();	
-var gScore = crystalValue();
-var bScore = crystalValue();
+var rScore = 0;
+var yScore = 0;	
+var gScore = 0;
+var bScore = 0;
+
 var totalScore = 0;
 winScore = 0;
 loseScore = 0;
-reset()
+startGame()
+console.log("tar ", targetNum);
+console.log("r ", rScore);
+console.log("y ", yScore);
+console.log("g ", gScore);
+console.log("b ", bScore);
 $(document).ready(function(){
 
 
 		$("#red").on("click", function(){
-			totalScore = totalScore + rScore;
-			$("#totalScore").html(totalScore);
-				if(totalScore == targetNum){
-				winScore++;
-				$("#win").text(winScore);
-				reset();
-				
-				}else if (totalScore > targetNum){
-				loseScore++;
-				$("#lose").text(loseScore);
-				reset();
-				
-			}
+			totalScore += rScore;
+			compareNum();
 		});
 
 		$("#yellow").on("click", function(){
-			totalScore = totalScore + yScore;
-			$("#totalScore").html(totalScore);
-			if(totalScore == targetNum){
-			console.log("win");
-			}else if (totalScore > targetNum){
-			console.log("lose")
-			}
+			totalScore += yScore;
+			compareNum();
 		});
 
 		$("#green").on("click", function(){
-			totalScore = totalScore + gScore;
-			$("#totalScore").html(totalScore);
-			if(totalScore == targetNum){
-			console.log("win");
-			}else if (totalScore > targetNum){
-			console.log("lose")
-			}
+			totalScore += gScore;
+			compareNum();
 		});
 
 		$("#blue").on("click", function(){
-			totalScore = totalScore + bScore;
-			$("#totalScore").html(totalScore);
-			if(totalScore == targetNum){
-			console.log("win");
-			}else if (totalScore > targetNum){
-			console.log("lose")
-			}
-
-	});
+			totalScore += bScore;
+			compareNum();
+		});
 });
 
 		
@@ -64,11 +43,29 @@ function crystalValue(){
 	score = Math.floor(Math.random()*12) + 1
 	return score.valueOf();
 }
-function reset(){
+
+function startGame(){
 	targetNum = 0;	
 	totalScore =0;
 	$("#totalScore").html(totalScore);
 	targetNum = Math.floor(Math.random() * 102) + 19;
 	$("#targetNum").html(targetNum);
-	crystalValue();
+	rScore = crystalValue();
+	yScore = crystalValue();	
+	gScore = crystalValue();
+	bScore = crystalValue();
+}
+
+function compareNum(){
+	$("#totalScore").html(totalScore);
+		if(totalScore == targetNum){
+		winScore++;
+		$("#win").text(winScore);
+		startGame();
+		
+		}else if (totalScore > targetNum){
+		loseScore++;
+		$("#lose").text(loseScore);
+		startGame();
+	}
 }

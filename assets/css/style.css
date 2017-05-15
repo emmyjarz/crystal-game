@@ -8,3 +8,14 @@ img{
 	font-size: 2em
 	
 }
+#win, #lose{
+	color: purple;
+	font-size: 2em;
+	font-weight: bold;
+}
+h1 {
+	font-family: 'Lobster', cursive;
+}
+body{
+	font-family: 'Gloria Hallelujah', cursive;
+}
