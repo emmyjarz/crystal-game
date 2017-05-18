@@ -46,7 +46,7 @@ function crystalValue(){
 
 function startGame(){
 	targetNum = 0;	
-	totalScore =0;
+	totalScore = 0;
 	$("#totalScore").html(totalScore);
 	targetNum = Math.floor(Math.random() * 102) + 19;
 	$("#targetNum").html(targetNum);

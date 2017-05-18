@@ -9,7 +9,7 @@ img{
 	
 }
 #win, #lose{
-	color: purple;
+	color: red;
 	font-size: 2em;
 	font-weight: bold;
 }
