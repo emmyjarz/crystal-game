@@ -5,16 +5,10 @@ var gScore = 0;
 var bScore = 0;
 
 var totalScore = 0;
-winScore = 0;
-loseScore = 0;
+var winScore = 0;
+var loseScore = 0;
 startGame()
-console.log("tar ", targetNum);
-console.log("r ", rScore);
-console.log("y ", yScore);
-console.log("g ", gScore);
-console.log("b ", bScore);
 $(document).ready(function(){
-
 
 		$("#red").on("click", function(){
 			totalScore += rScore;
